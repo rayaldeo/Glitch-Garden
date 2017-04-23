@@ -1,0 +1,33 @@
+V5 Bloques
+---------------
+Instructions:
+
+
+++ Bloques ++
+
+A "letter block" pixelfont.  Lowercase is light;
+uppercase is dark. There are some non-letter 
+characters scattered in some of the punctuation.
+Use sparingly, and tweak spacing for more 
+interesting results.
+
+
+Set on screen at 14pt (or multiple of), with 
+antialias off.
+
+
+---------------
+Usage:  This is a free font--you may use 
+this and other V5 fonts at will.  It may not 
+be sold, altered, or improperly credited,
+however.  All I ask is that you kindly inform 
+me if you find this font useful, and where
+you've used it.
+
+Enjoy,
+
+©2002 
+Roberto Christen
+rob@vfive.com
+
+
