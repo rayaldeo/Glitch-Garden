@@ -4,6 +4,7 @@ using System.Collections;
 public class LevelManager : MonoBehaviour {
 
 	public float autoLoadNextLevelAfter;
+	public bool splashScreen;
 
 	void Start(){
 		Invoke ("LoadNextLevel",autoLoadNextLevelAfter);
@@ -15,7 +16,9 @@ public class LevelManager : MonoBehaviour {
 	}
 	
 	private void LoadNextLevel(){
-		Application.LoadLevel(Application.loadedLevel+1);
+		if(splashScreen){
+			Application.LoadLevel(Application.loadedLevel+1);
+		}
 	}
 	
 	public void QuitLevel(){
