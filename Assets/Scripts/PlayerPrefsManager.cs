@@ -9,14 +9,16 @@ public class PlayerPrefsManager : MonoBehaviour {
 	//level_unlocked_1
 
 	public static void SetMasterVolume(float volume){
-		if(volume >0f&& volume <1f){
+		if(volume >=0f&& volume <=3f){
 			PlayerPrefs.SetFloat(MASTER_VOLUME_KEY,volume);
+			Debug.Log("Volume got set to: "+ volume);
 		}else{
 			Debug.LogError("Master Volume out of range");
 		}
 	}
 	
 	public static float GetMasterVolume(){
+		Debug.Log ("Player Pref Manager Volume: "+ PlayerPrefs.GetFloat(MASTER_VOLUME_KEY));
 		return PlayerPrefs.GetFloat(MASTER_VOLUME_KEY);
 	}
 	
@@ -42,14 +44,16 @@ public class PlayerPrefsManager : MonoBehaviour {
 	}
 	
 	public static void SetDifficulty( float difficulty){
-		if(difficulty >0f&& difficulty <2f){
+		if(difficulty >=1f&& difficulty <=3f){
 			PlayerPrefs.SetFloat(DIFFICULTY,difficulty);
+			Debug.Log("Difficulty got set to: "+ difficulty);
 		}else{
 			Debug.LogError("Difficulty Out of Range");
 		}
 	}
 	
 	public static float GetDifficulty(){
+		Debug.Log ("Player Pref Manager Difficulty: "+ PlayerPrefs.GetFloat(DIFFICULTY));
 		return PlayerPrefs.GetFloat(DIFFICULTY);
 	}
 }

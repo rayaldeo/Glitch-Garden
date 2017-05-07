@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour {
 	}
 	
 	public void LoadLevel(string name){
-		Debug.Log("Level Load Request for: "+name);
+		//Debug.Log("Level Load Request for: "+name);
 		Application.LoadLevel(name);
 	}
 	

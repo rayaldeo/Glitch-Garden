@@ -5,6 +5,7 @@ public class TEST : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+	
 		print (PlayerPrefsManager.GetMasterVolume());
 		PlayerPrefsManager.SetMasterVolume(0.4f);
 		print (PlayerPrefsManager.GetMasterVolume());
