@@ -5,12 +5,8 @@ public class LoadSoundController : MonoBehaviour {
 	
 	public AudioSource audioSource;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		audioSource.volume = PlayerPrefsManager.GetMasterVolume();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

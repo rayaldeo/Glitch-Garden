@@ -7,7 +7,11 @@ public class LevelManager : MonoBehaviour {
 	public bool splashScreen;
 
 	void Start(){
-		Invoke ("LoadNextLevel",autoLoadNextLevelAfter);
+		if(autoLoadNextLevelAfter<=0){
+			Debug.Log ("Level Auto load is disabled, use a positive number in seconds");
+		}else{
+			Invoke ("LoadNextLevel",autoLoadNextLevelAfter);
+		}
 	}
 	
 	public void LoadLevel(string name){

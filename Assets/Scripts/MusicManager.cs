@@ -6,6 +6,7 @@ public class MusicManager : MonoBehaviour {
 	public AudioClip[] levelMusicChangeArray;
 	private AudioSource audioSource;
 	
+	
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
 		Debug.Log ("Don't destroy on load:" + name);
@@ -14,6 +15,7 @@ public class MusicManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		audioSource = GetComponent<AudioSource>();
+		audioSource.volume = PlayerPrefsManager.GetMasterVolume();
 	}
 	
 	void OnLevelWasLoaded(int level ){
