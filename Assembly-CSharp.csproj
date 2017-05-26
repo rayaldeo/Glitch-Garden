@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Attacker.cs" />
+     <Compile Include="Assets\Scripts\Defender.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\LoadSoundController.cs" />
      <Compile Include="Assets\Scripts\MusicManager.cs" />
