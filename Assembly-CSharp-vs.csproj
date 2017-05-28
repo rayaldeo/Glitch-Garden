@@ -48,12 +48,15 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Attacker.cs" />
      <Compile Include="Assets\Scripts\Defender.cs" />
+     <Compile Include="Assets\Scripts\Fox.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\Lizard.cs" />
      <Compile Include="Assets\Scripts\LoadSoundController.cs" />
      <Compile Include="Assets\Scripts\MusicManager.cs" />
      <Compile Include="Assets\Scripts\OptionsController.cs" />
      <Compile Include="Assets\Scripts\Panel.cs" />
      <Compile Include="Assets\Scripts\PlayerPrefsManager.cs" />
+     <Compile Include="Assets\Scripts\Stone.cs" />
      <Compile Include="Assets\Scripts\TEST.cs" />
      <None Include="Assets\Font\bloques.txt" />
  <Reference Include="UnityEngine.UI">

@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (Rigidbody2D))]
 public class Attacker : MonoBehaviour {
 
 
-	[Range (-1f,1.5f)] public float currentSpeed;
-		
+	private float currentSpeed;
+	private GameObject currentTarget;
 
 	// Use this for initialization
 	void Start () {
-		Rigidbody2D myRigid = gameObject.AddComponent<Rigidbody2D>();
-		myRigid.isKinematic=true;
-	
+		//Rigidbody2D myRigid = gameObject.AddComponent<Rigidbody2D>();
+		//myRigid.isKinematic=true;	
 	}
 	
 	// Update is called once per frame
@@ -28,8 +28,12 @@ public class Attacker : MonoBehaviour {
 	public void SetCurrentSpeed(float speed){
 		currentSpeed=speed;
 	}
-	
+	//Called from the Animator at the time of the actual Attack
 	public void StrikeCurrentTarget(float damage){
 		Debug.Log(name + " Caused damage: "+ damage);
+	}
+	
+	public void Attack(GameObject obj){
+		currentTarget = obj;
 	}
 }
