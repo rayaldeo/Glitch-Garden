@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 [RequireComponent (typeof (Attacker))]
 
 public class Fox : MonoBehaviour {
