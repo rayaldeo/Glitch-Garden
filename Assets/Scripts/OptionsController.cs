@@ -24,7 +24,7 @@ public class OptionsController : MonoBehaviour {
 			musicManager.ChangeVolume(volumeSlider.value);
 			Debug.Log ("This is the music Manager: "+ musicManager);
 			}catch(Exception e){
-				Debug.Log("No Music Player Present");
+				Debug.Log("No Music Player Present ,Exception: " + e);
 			}
 	}
 	
