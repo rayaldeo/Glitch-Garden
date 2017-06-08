@@ -2,12 +2,16 @@
 using System.Collections;
 
 public class Shooter : MonoBehaviour {
-	public GameObject projectile,projectileParent,gun;
+	public GameObject projectile,gun;
+	private  GameObject projectileParent;
 	
 
 	// Use this for initialization
 	void Start () {
-	
+		projectileParent = GameObject.Find ("Projectiles");
+		if(!projectileParent){
+			projectileParent = new GameObject("Projectiles");
+		}
 	}
 	
 	// Update is called once per frame
