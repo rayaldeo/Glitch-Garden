@@ -22,8 +22,12 @@ public class DefenderSpawner : MonoBehaviour {
 	void OnMouseDown(){
 		//print ("clicked Position: "+Input.mousePosition);
 		print ("clicked Position: "+SnapTwoGrid(CalculateWorldPointOfMouseClick()));
-		GameObject newDefender =Instantiate (Buttons.selectedDefender,SnapTwoGrid(CalculateWorldPointOfMouseClick()),Quaternion.identity) as GameObject;
-		newDefender.transform.parent = defenderParent.transform;
+		//if(!Buttons.selectedDefender){
+			GameObject newDefender =Instantiate (Buttons.selectedDefender,SnapTwoGrid(CalculateWorldPointOfMouseClick()),Quaternion.identity) as GameObject;
+			newDefender.transform.parent = defenderParent.transform;
+		//}else{
+			//Debug.Log ("A Defender was not selected");
+		//}
 	}
 	
 	Vector2 SnapTwoGrid(Vector2 rawWorldPosition){
