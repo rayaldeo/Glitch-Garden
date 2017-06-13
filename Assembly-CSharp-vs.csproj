@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Shooter.cs" />
      <Compile Include="Assets\Scripts\Shredder.cs" />
+     <Compile Include="Assets\Scripts\StarDisplay.cs" />
      <Compile Include="Assets\Scripts\Stone.cs" />
      <Compile Include="Assets\Scripts\TEST.cs" />
      <None Include="Assets\Font\bloques.txt" />
