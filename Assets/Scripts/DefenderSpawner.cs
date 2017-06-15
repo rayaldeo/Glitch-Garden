@@ -5,9 +5,11 @@ public class DefenderSpawner : MonoBehaviour {
 
 	public Camera myCamera;
 	private GameObject defenderParent;
+	private StarDisplay starDisplay;
 
 	// Use this for initialization
 	void Start () {
+		starDisplay = GameObject.FindObjectOfType<StarDisplay>();
 		defenderParent = GameObject.Find ("Defenders");
 		if(!defenderParent){
 			defenderParent = new GameObject("Defenders");
@@ -22,12 +24,17 @@ public class DefenderSpawner : MonoBehaviour {
 	void OnMouseDown(){
 		//print ("clicked Position: "+Input.mousePosition);
 		print ("clicked Position: "+SnapTwoGrid(CalculateWorldPointOfMouseClick()));
-		//if(!Buttons.selectedDefender){
-			GameObject newDefender =Instantiate (Buttons.selectedDefender,SnapTwoGrid(CalculateWorldPointOfMouseClick()),Quaternion.identity) as GameObject;
-			newDefender.transform.parent = defenderParent.transform;
-		//}else{
-			//Debug.Log ("A Defender was not selected");
-		//}
+		int defenderStarCost = Buttons.selectedDefender.GetComponent<Defender>().defenderStarCost;
+		if(starDisplay.UseStars(defenderStarCost)==StarDisplay.Status.SUCCESS){
+			SpawnDefender();
+		}else{
+			Debug.Log ("Insuffiecent stars to spawn");
+		}
+	}
+	
+	void SpawnDefender(){
+		GameObject newDefender =Instantiate (Buttons.selectedDefender,SnapTwoGrid(CalculateWorldPointOfMouseClick()),Quaternion.identity) as GameObject;
+		newDefender.transform.parent = defenderParent.transform;
 	}
 	
 	Vector2 SnapTwoGrid(Vector2 rawWorldPosition){
